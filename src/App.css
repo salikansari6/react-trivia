@@ -1,38 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap");
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /* text-align: center; */
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  font-family: "Urbanist", sans-serif;
+}
+
+.trivia-container {
+  margin-top: 20px;
+  width: 50%;
+  font-size: 25px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 20px;
+}
+
+.question {
+  background: rgb(148, 233, 167);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 5px rgba(139, 132, 132, 0.5);
+}
+
+.answers {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.answers div {
+  padding: 20px;
+  background: #75f2f6;
+  border-radius: 5px;
+  box-shadow: 0px 1px 5px rgba(139, 132, 13, 0.2);
+}
+
+.answers label {
+  margin-left: 10px;
+}
+
+.question {
+  margin-top: 20px;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-primary {
+  padding: 10px 20px 10px 20px;
+  font-size: 20px;
+  background: #2ea02e;
+  box-shadow: 0px 1px 5px rgba(139, 132, 132, 0.5);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   color: white;
+  font-weight: 600;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-primary:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 3px 8px rgba(139, 132, 132, 0.5);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.score {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.play-again {
+  margin-top: 20px;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: black;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ddd;
+  border-radius: 100%;
+  background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: rgb(20, 76, 167);
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
