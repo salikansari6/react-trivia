@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/react-trivia/static/css/main.597a1e37.chunk.css",
+    "main.js": "/react-trivia/static/js/main.bc2f6170.chunk.js",
+    "main.js.map": "/react-trivia/static/js/main.bc2f6170.chunk.js.map",
+    "runtime-main.js": "/react-trivia/static/js/runtime-main.bc6431dc.js",
+    "runtime-main.js.map": "/react-trivia/static/js/runtime-main.bc6431dc.js.map",
+    "static/js/2.d0d6ac88.chunk.js": "/react-trivia/static/js/2.d0d6ac88.chunk.js",
+    "static/js/2.d0d6ac88.chunk.js.map": "/react-trivia/static/js/2.d0d6ac88.chunk.js.map",
+    "index.html": "/react-trivia/index.html",
+    "static/css/main.597a1e37.chunk.css.map": "/react-trivia/static/css/main.597a1e37.chunk.css.map",
+    "static/js/2.d0d6ac88.chunk.js.LICENSE.txt": "/react-trivia/static/js/2.d0d6ac88.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bc6431dc.js",
+    "static/js/2.d0d6ac88.chunk.js",
+    "static/css/main.597a1e37.chunk.css",
+    "static/js/main.bc2f6170.chunk.js"
+  ]
+}
