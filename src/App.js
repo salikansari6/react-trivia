@@ -114,7 +114,7 @@ function App() {
             currentQuestion={questions[currentIndex]}
           />
         ) : (
-          <ClipLoader loading={loading} css={override} size={150} />
+          <ClipLoader loading={loading} css={override} size={80} />
         )}
         <div className="buttons">
           <button className="btn-primary" onClick={handlePrev}>
