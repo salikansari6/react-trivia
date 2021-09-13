@@ -4,13 +4,16 @@ import Popup from "reactjs-popup";
 import "./App.css";
 import { css } from "@emotion/react";
 import ClipLoader from "react-spinners/ClipLoader";
+import { QUESTIONS_LENGTH } from "./constants";
 
 function App() {
   const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [showGameOver, setShowGameOver] = useState(false);
-  const [userAnswers, setUserAnswers] = useState(new Array(5).fill(null));
+  const [userAnswers, setUserAnswers] = useState(
+    new Array(QUESTIONS_LENGTH).fill(null)
+  );
   const [loading, setLoading] = useState(true);
 
   const checkAnswers = () => {
@@ -45,7 +48,7 @@ function App() {
     setCurrentIndex(0);
     setScore(0);
     setShowGameOver(false);
-    setUserAnswers(new Array(5).fill(null));
+    setUserAnswers(new Array(QUESTIONS_LENGTH).fill(null));
   };
 
   const handleNext = () => {
@@ -63,7 +66,7 @@ function App() {
   useEffect(() => {
     if (!showGameOver) {
       setLoading(true);
-      fetch("https://opentdb.com/api.php?amount=5&difficulty=easy")
+      fetch("https://opentdb.com/api.php?amount=10&category=18")
         .then((res) => res.json())
         .then((data) => {
           console.log(data.results);
@@ -104,7 +107,7 @@ function App() {
           Play Again
         </button>
       </Popup>
-      <h1 className="heading">React Trivia</h1>
+      <h1 className="heading">Computer Science Trivia</h1>
       <div className="trivia-container">
         {!loading ? (
           <QuestionCard

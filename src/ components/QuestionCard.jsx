@@ -1,4 +1,5 @@
 import React from "react";
+import { QUESTIONS_LENGTH } from "../constants";
 
 const QuestionCard = ({ currentQuestion, setUserAnswers, currentIndex }) => {
   const handleOptionChange = (e) => {
@@ -17,7 +18,9 @@ const QuestionCard = ({ currentQuestion, setUserAnswers, currentIndex }) => {
 
   return (
     <div className="question-card">
-      <p className="question-number">Question : {currentIndex + 1} / 5</p>
+      <p className="question-number">
+        Question : {currentIndex + 1} / {QUESTIONS_LENGTH}
+      </p>
       <div
         className="question"
         dangerouslySetInnerHTML={{ __html: currentQuestion.question }}
